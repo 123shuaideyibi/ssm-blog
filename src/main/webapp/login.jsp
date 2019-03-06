@@ -2,8 +2,11 @@
 <html>
 <head>
     <title>登录页面</title>
+    <%--<script type="text/javascript" charset="UTF-8" src="js/login.js"></script>--%>
+    <script type="text/javascript" src="static/plugins/layui/layui.js"></script>
 </head>
 <body>
+
 
 <form action="${ctx}/user/login" method="post">
     <table border="0" align="center">
@@ -20,13 +23,19 @@
         </tr>
         <tr>
             <td align="center" colspan="3">
-                <input type="submit" value="登录">
+                <input type="submit" value="登录" onclick="toLogin()"/>
             </td>
         </tr>
     </table>
-    <%--<input type="text" name="username" placeholder="请输入您的用户名"/><br>--%>
-    <%--<input type="password" name="password" placeholder="请输入您的用户名"/><br>--%>
-    <%--<input type="submit" value="登录">--%>
 </form>
+
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+
+        layer.msg('hello');
+    });
+</script>
+
 </body>
 </html>

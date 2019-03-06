@@ -4,8 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="home.jsp">点击进入主页</a><br>
-    <a href="login.jsp">点击进入登录页面</a><br>
-    <a href="register.jsp">点击进入注册页面</a><br>
+<% response.sendRedirect("jsp/blogApp/register.jsp"); %>
 </body>
 </html>
