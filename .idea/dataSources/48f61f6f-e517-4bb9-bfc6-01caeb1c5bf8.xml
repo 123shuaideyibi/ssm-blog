@@ -927,9 +927,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="234" parent="8" name="user">
-      <Collation>utf8_general_ci</Collation>
-    </table>
+    <table id="234" parent="8" name="user"/>
     <column id="235" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>

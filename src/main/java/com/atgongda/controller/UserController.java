@@ -23,10 +23,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     /**
-     * 登录的控制层
-     *
+     * 登录
      * @param username
      * @param password
      * @param request
@@ -58,8 +56,14 @@ public class UserController {
         }
     }
 
-
-
+    /**
+     * 注册
+     * @param username
+     * @param password
+     * @param request
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(@RequestParam("username") String username, @RequestParam("password") String password,HttpServletRequest request, Model model) {
         System.out.println("输入的信息"+username+password);
@@ -69,7 +73,7 @@ public class UserController {
 
         boolean flag = userService.insertUser(user);
         System.out.println(flag);
-        return null;
+        return "/show";
     }
 
 }

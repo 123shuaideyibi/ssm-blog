@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
+    <title>博客</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -14,7 +14,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">欢迎来到博客系统</div>
+        <div style="padding: 15px;">欢迎来到博客管理系统</div>
     </div>
 
     <div class="layui-footer">

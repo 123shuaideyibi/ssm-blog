@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
+    <title>登录页面</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -27,7 +27,7 @@
                 </tr>
                 <tr>
                     <th>密码：</th>
-                    <td><input type="password" name="password" placeholder="请输入您的用户名"/></td>
+                    <td><input type="password" name="password" placeholder="请输入您的密码"/></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3">
