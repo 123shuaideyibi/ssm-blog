@@ -11,8 +11,6 @@
     <title></title>
 </head>
 <body>
-
-该界面用来展示点击按钮或者事件会得到的结果
-
+注册成功
 </body>
 </html>

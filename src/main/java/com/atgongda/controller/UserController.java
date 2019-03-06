@@ -72,8 +72,11 @@ public class UserController {
         user.setPassword(password);
 
         boolean flag = userService.insertUser(user);
-        System.out.println(flag);
-        return "/show";
+        if (flag == true){
+            return "registerSuccess";
+        }else {
+            return "registerError";
+        }
     }
 
 }
