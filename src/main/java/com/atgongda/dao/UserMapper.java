@@ -12,12 +12,22 @@ public interface UserMapper {
 
     /**
      * 通过用户名查询用户信息
-     * @param username
+     * @param userName
      * @return
      */
-    User selectUserByUserName(@Param("username") String username);
+    User selectUserByUserName(@Param("userName") String userName);
 
-
+    /**
+     * 注册的时候插入用户数据
+     * @param user
+     * @return
+     */
     boolean insertUser(User user);
+
+    /**
+     *
+     * @return
+     */
+    boolean updateStatus();
 
 }

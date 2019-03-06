@@ -18,8 +18,8 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User selectUserByUserName(String username) {
-        return userMapper.selectUserByUserName(username);
+    public User selectUserByUserName(String userName) {
+        return userMapper.selectUserByUserName(userName);
     }
 
     @Override

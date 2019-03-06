@@ -23,11 +23,11 @@
                 </caption>
                 <tr>
                     <th>用户名：</th>
-                    <td><input type="text" name="username" placeholder="请输入您的用户名"/></td>
+                    <td><input type="text" name="userName" placeholder="请输入您的用户名"/></td>
                 </tr>
                 <tr>
                     <th>密码：</th>
-                    <td><input type="password" name="password" placeholder="请输入您的密码"/></td>
+                    <td><input type="password" name="userPassword" placeholder="请输入您的密码"/></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3">

@@ -45,8 +45,8 @@ public class ServiceTest {
         System.out.println("service测试开始。。。。");
 
         User user = new User();
-        user.setUsername("王浩");
-        user.setPassword("123");
+        user.setUserName("王浩");
+        user.setUserPassword("123");
         System.out.println(userService.insertUser(user));
 
         System.out.println("service测试结束。。。。");

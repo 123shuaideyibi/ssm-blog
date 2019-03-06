@@ -45,10 +45,20 @@ public class DaoTest {
     public void insertUser(){
         System.out.println("dao测试开始。。。。");
         User user = new User();
-        user.setUsername("王浩");
-        user.setPassword("123");
+        user.setUserName("王浩");
+        user.setUserPassword("123");
         System.out.println(userMapper.insertUser(user));
-        System.out.println("到测试结束。。。。");
+        System.out.println("dao测试结束。。。。");
+    }
+
+    /**
+     * 退出登录的实现：
+     * 1、先确认该用户的登录状态status是true
+     * 1、
+     */
+    @Test
+    public void updateStatus(){
+        System.out.println();
     }
 
 }

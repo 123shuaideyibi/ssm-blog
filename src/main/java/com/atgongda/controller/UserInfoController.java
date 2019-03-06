@@ -7,7 +7,8 @@ import org.springframework.stereotype.Controller;
  * @date 2019/03/06/16:01
  */
 @Controller
-public class ExitController {
+public class UserInfoController {
+
 
 
 }

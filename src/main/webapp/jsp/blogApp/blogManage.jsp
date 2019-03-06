@@ -14,20 +14,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">基本资料</div>
-
-        <div>
-            <ul id="user_profile" class="user_profile">
-                <li><span>昵称：</span></li>
-                <li><span>关注：</span></li>
-                <li><span>评论：</span></li>
-                <li><span>点赞：</span></li>
-            </ul>
-        </div>
-
-        <div>
-            <button id="usermod">修改用户基本信息</button>
-        </div>
+        <div style="padding: 15px;">博客管理</div>
     </div>
 
     <div class="layui-footer">

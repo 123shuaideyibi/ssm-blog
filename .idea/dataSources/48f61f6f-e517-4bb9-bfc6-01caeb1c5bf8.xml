@@ -927,27 +927,35 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="234" parent="8" name="user"/>
-    <column id="235" parent="234" name="id">
+    <table id="234" parent="8" name="user">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <column id="235" parent="234" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="234" name="username">
+    <column id="236" parent="234" name="user_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="234" name="password">
+    <column id="237" parent="234" name="user_password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="238" parent="234" name="PRIMARY">
+    <column id="238" parent="234" name="user_status">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="239" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

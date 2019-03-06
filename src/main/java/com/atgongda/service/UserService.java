@@ -10,10 +10,10 @@ public interface UserService {
 
     /**
      * 通过username来查询该用户的信息，如果能查到，则该用户存在，如果不能让查到，则该用户不存在
-     * @param username
+     * @param userName
      * @return
      */
-    User selectUserByUserName(String username);
+    User selectUserByUserName(String userName);
 
 
     boolean insertUser(User user);

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: sushuai
-  Date: 2019/3/4
-  Time: 8:54
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,6 +5,8 @@
 </head>
 <body>
 登录成功
-${user.username}
+设置的state：${status}
+设置的user:${user.toString()}
+${user}
 </body>
 </html>

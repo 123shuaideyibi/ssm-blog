@@ -22,12 +22,12 @@
                 </caption>
                 <tr>
                     <th>用户名：</th>
-                    <td><input type="text" name="username" id="username" placeholder="请输入您的用户名"/></td>
+                    <td><input type="text" name="userName" id="userName" placeholder="请输入您的用户名"/></td>
                     <td colspan="1"><span id="tip_username">*用户名不能为空</span></td>
                 </tr>
                 <tr>
                     <th>密码：</th>
-                    <td><input type="password" name="password" id="password" placeholder="请输入您的密码"/></td>
+                    <td><input type="userPassword" name="userPassword" id="userPassword" placeholder="请输入您的密码"/></td>
                     <td colspan="1"><span id="tip_password">*密码不能为空</span></td>
                 </tr>
                 <tr>
