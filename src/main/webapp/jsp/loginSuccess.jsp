@@ -4,9 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-登录成功
-设置的state：${status}
-设置的user:${user.toString()}
-${user}
+恭喜登录 <b>${user.userName}</b>成功
+当前登录状态status为：${user.userStatus}
 </body>
 </html>

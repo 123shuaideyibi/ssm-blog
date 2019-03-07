@@ -3,17 +3,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atgongda.dao.UserMapper">
 
+
+    <!--=========================登录start======================================-->
+    <select id="selectUserByUserName" resultType="com.atgongda.entity.User">
+          select * from user  where user_name = #{userName}
+    </select>
+    <update id="updateStatusToTrue">
+        update user set user_status=1 where user_name = #{userName}
+    </update>
+    <!--=========================登录start======================================-->
+
+
+    <!--=========================注册start======================================-->
     <insert id="insertUser" parameterType="com.atgongda.entity.User">
         insert into user (user_name,user_password)
         values (#{userName},#{userPassword})
     </insert>
+    <!--=========================注册end======================================-->
 
-    <update id="updateStatus">
-        update user set user_status=false where user_name = #{useName}
-    </update>
 
-    <select id="selectUserByUserName" resultType="com.atgongda.entity.User">
-          select * from user  where user_name = #{userName}
-    </select>
 
 </mapper>

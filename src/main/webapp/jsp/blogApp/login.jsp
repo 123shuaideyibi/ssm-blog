@@ -50,6 +50,11 @@
         var element = layui.element;
 
     });
+
+    <%--function aaaa() {--%>
+        <%--var a = "${sessionScope.userName}"--%>
+    <%--}--%>
+
 </script>
 </body>
 </html>

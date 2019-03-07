@@ -35,31 +35,32 @@ public class UserController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam("userName") String userName, @RequestParam("userPassword") String userPassword, HttpServletRequest request, Model model) {
+        //通过用户名来查询该用户是否存在
         User user = userService.selectUserByUserName(userName);
-        if (user != null) {
-            if (user.getUserPassword().equals(userPassword)) {
-                System.out.println("用户名和密码都正确，即将登陆！！！");
+        if (user != null) {//如果用户不为空
+            if (user.getUserPassword().equals(userPassword)) {//如果用户名和密码都正确
+                //将用户的登录状态userStatus更改为true，mysql表中的user_status更改为0
+                boolean userStatus = userService.updateStatusToTrue(userName);
 
-                //将登陆成功后的userName放入session当中
+                //将登陆成功后的userName放入session当中(userId不能放入session当中，不支持long、int等类型的值)
                 HttpSession session = request.getSession();
                 session.setAttribute("userName", user.getUserName());
 
                 //Model addAttribute(String var1, @Nullable Object var2);
                 // 将需要返回给jsp的数据返回放入model当中，jsp当中只需要通过 ${val1} 即可获取，且数组，实体类的对象，string等都可以获取
-                model.addAttribute("status", "success");
                 model.addAttribute("user",user);
                 return "loginSuccess";
 
-            } else {
-
+            } else {//用户名正确,密码不正确
                 System.out.println("用户名正确，密码不正确！！！");
-                model.addAttribute("failure", "用户名或密码错误！");
+
+                model.addAttribute("userPwd_failure", "*密码错误！");
                 return "loginError";
 
             }
-        } else {
-
+        } else {//用名不正确！！！
             System.out.println("用名不正确！！！");
+
             model.addAttribute("state", "failure");
             model.addAttribute("message", "该用户不存在");
             return "loginError";
