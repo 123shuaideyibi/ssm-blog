@@ -3,6 +3,7 @@ package com.atgongda.entity;
 import java.io.Serializable;
 
 /**
+ * 用户表
  * @author sushuai
  * @date 2019/03/03/19:26
  */

@@ -1,6 +1,7 @@
 package com.atgongda.entity;
 
 /**
+ * 文章表
  * @author sushuai
  * @date 2019/03/09/21:19
  */
