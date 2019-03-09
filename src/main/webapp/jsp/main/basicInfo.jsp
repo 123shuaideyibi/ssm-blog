@@ -38,11 +38,12 @@
                 </tr>
             </table>
         </div>
-        <div class="box">
-            <button id="modifyInfo">修改信息</button>
-        </div>
 
+        <div class="box">
+            <a href="/jsp/main/modifyInfo.jsp">修改用户信息</a>
+        </div>
     </div>
+
 
     <div class="layui-footer">
         <!-- 底部固定区域 -->

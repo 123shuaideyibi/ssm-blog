@@ -4,17 +4,28 @@
 <mapper namespace="com.atgongda.dao.UserMapper">
 
 
-    <!-- 目的：为DAO接口方法提供sql语句配置 -->
-    <!-- 查询用户和密码进行登录 -->
+    <!-- 查询用户和密码 -->
     <select id="findByUserName" resultType="com.atgongda.entity.User">
         select * from user where user_name = #{userName}
     </select>
 
-    <!-- 插入用户名和密码进行注册 -->
+
+    <!-- 注册:插入用户名和密码进行 -->
     <insert id="insertUser">
         insert into user (user_name, user_password) values (#{userName},#{userPassword})
     </insert>
 
+    <!--修改：更新用户基本信息-->
+    <update id="updateUserInfo">
+        update user
+        set
+        user_name = #{userName},
+        user_password = #{userPassword},
+        user_phone = #{userPhone},
+        user_email = #{userEmail}
+        where user_id = #{userId}
+    </update>
 
 
 </mapper>
+

@@ -14,9 +14,44 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">修改基本资料页面页面</div>
+        <div style="padding: 15px;">修改个人信息页面</div>
 
 
+        session的值：${user};<br>
+        session的userId的值:${user.userId}
+
+        <form action="${ctx}/user/modifyInfo" method="post">
+            <table border="0" align="center">
+                <caption>
+                    修改信息
+                </caption>
+                <tr>
+                    <%--隐藏的userid会随着表单一起被传送给${ctx}/user/modifyInfo,默认当前登录用户--%>
+                    <td><input type="hidden" id="userId" name="userId" value="${user.userId}"/></td>
+                </tr>
+                <tr>
+                    <th>用户名：</th>
+                    <td><input type="text" id="userName" name="userName" placeholder="请输入您的用户名"/></td>
+                </tr>
+                <tr>
+                    <th>密码：</th>
+                    <td><input type="password" id="userPassword" name="userPassword" placeholder="请输入您的密码"/></td>
+                </tr>
+                <tr>
+                    <th>手机号：</th>
+                    <td><input type="text" id="userPhone" name="userPhone" placeholder="请输入您的手机号"/></td>
+                </tr>
+                <tr>
+                    <th>邮箱：</th>
+                    <td><input type="text" id="userEmail" name="userEmail" placeholder="请输入您的邮箱"/></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="3">
+                        <input type="submit" value="确认修改"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
 
     </div>

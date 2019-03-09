@@ -41,6 +41,7 @@
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/jsp/main/basicInfo.jsp">基本资料</a></dd>
+                <dd><a href="/user/outLogin">退出</a></dd>
             </dl>
         </li>
 
@@ -65,7 +66,7 @@
             </li>
             <li class="layui-nav-item"><a href="/jsp/main/login.jsp">登录</a></li>
             <li class="layui-nav-item"><a href="/jsp/main/register.jsp">注册</a></li>
-            <li class="layui-nav-item"><a href="/jsp/main/blogManage.jsp">博客管理</a></li>
+            <li class="layui-nav-item"><a href="/jsp/main/background.jsp">后台管理</a></li>
         </ul>
     </div>
 </div>

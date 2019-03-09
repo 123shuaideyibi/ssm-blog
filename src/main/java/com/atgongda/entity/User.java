@@ -14,7 +14,16 @@ public class User implements Serializable {
     private String userPhone;
     private String userEmail;
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userPhone='" + userPhone + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                '}';
+    }
 
     public Long getUserId() {
         return userId;
