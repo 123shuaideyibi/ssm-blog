@@ -4,7 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-恭喜登录 <b>${user.userName}</b>成功
-当前登录状态status为：${user.userStatus}
+登录成功
 </body>
 </html>

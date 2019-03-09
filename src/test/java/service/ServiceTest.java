@@ -25,30 +25,12 @@ public class ServiceTest {
 
 
     /**
-     * 1、登录时通过用户名来确认用户名是否存在
+     * 验证用户名和密码是否都正确
      */
     @Test
-    public void selectUserByUserName() {
-        System.out.println("service测试开始。。。。");
-
-        System.out.println(userService.selectUserByUserName("张三"));
-
-        System.out.println("service测试结束。。。。");
+    public void checkLogin() {
+        System.out.println(userService.checkLogin("张三","123"));
     }
 
 
-    /**
-     * 2、注册时往user表里面插入用户名和密码
-     */
-    @Test
-    public void insertUser(){
-        System.out.println("service测试开始。。。。");
-
-        User user = new User();
-        user.setUserName("王浩");
-        user.setUserPassword("123");
-        System.out.println(userService.insertUser(user));
-
-        System.out.println("service测试结束。。。。");
-    }
 }

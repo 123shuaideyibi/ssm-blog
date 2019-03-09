@@ -1,0 +1,11 @@
+th{
+    width: 150px;
+}
+td{
+    width: 150px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

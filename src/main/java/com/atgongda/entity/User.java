@@ -11,17 +11,10 @@ public class User implements Serializable {
     private Long userId;
     private String userName;
     private String userPassword;
-    private boolean userStatus;
+    private String userPhone;
+    private String userEmail;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userStatus=" + userStatus +
-                '}';
-    }
+
 
     public Long getUserId() {
         return userId;
@@ -47,11 +40,19 @@ public class User implements Serializable {
         this.userPassword = userPassword;
     }
 
-    public boolean isUserStatus() {
-        return userStatus;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserStatus(boolean userStatus) {
-        this.userStatus = userStatus;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 }

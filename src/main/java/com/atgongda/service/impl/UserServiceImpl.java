@@ -5,6 +5,7 @@ import com.atgongda.entity.User;
 import com.atgongda.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.security.util.Password;
 
 /**
  * @author sushuai
@@ -16,24 +17,34 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-    /*===============================登录start==================================================*/
+    /**
+     * 检查用户登陆业务
+     *
+     * @param userName
+     * @param userPassword
+     * @return
+     */
     @Override
-    public User selectUserByUserName(String userName) {
-        return userMapper.selectUserByUserName(userName);
+    public User checkLogin(String userName, String userPassword) {
+        User user = userMapper.findByUserName(userName);
+        if (user != null && user.getUserPassword().equals(userPassword)) {
+            return user;
+        }
+        return null;
     }
 
     @Override
-    public boolean updateStatusToTrue(String userName) {
-        return userMapper.updateStatusToTrue(userName);
+    public boolean checkRegister(String userName, String userPassword) {
+        User user = userMapper.findByUserName(userName);
+        if (user == null) {//如果用户存在，返回nul，
+            return userMapper.insertUser(userName, userPassword);
+        }
+        return false;
     }
-    /*===============================登录end==================================================*/
 
-
-    /*===============================注册start==================================================*/
-    @Override
-    public boolean insertUser(User user) {
-        return userMapper.insertUser(user);
-    }
-    /*==============================注册end===================================================*/
+//    @Override
+//    public boolean insertUser(User user) {
+//        return userMapper.insertUser(user);
+//    }
 
 }

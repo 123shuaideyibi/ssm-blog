@@ -9,30 +9,20 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface UserMapper {
 
-    /*===============================登录start==================================================*/
     /**
-     * 通过用户名查询用户信息
+     * 查找用户名和登录密码
      * @param userName
      * @return
      */
-    User selectUserByUserName(@Param("userName") String userName);
+    User findByUserName(String userName);
 
     /**
-     *更改用户的状态为true
+     * 注册用户名和密码
      * @param userName
-     */
-    boolean updateStatusToTrue(String userName);
-    /*===============================登录end==================================================*/
-
-
-    /*===============================注册start==================================================*/
-    /**
-     * 注册的时候插入用户数据
-     * @param user
+     * @param userPassword
      * @return
      */
-    boolean insertUser(User user);
-    /*===============================注册end==================================================*/
+    boolean insertUser(@Param("userName") String userName,@Param("userPassword") String userPassword);
 
 
 }

@@ -16,26 +16,29 @@
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">登录页面</div>
 
-        <form action="${ctx}/user/login" method="post">
+
+        <form action="${ctx}/user/checkLogin" method="post">
             <table border="0" align="center">
                 <caption>
                     用户登录
                 </caption>
                 <tr>
                     <th>用户名：</th>
-                    <td><input type="text" name="userName" placeholder="请输入您的用户名"/></td>
+                    <td><input type="text" id="userName" name="userName" placeholder="请输入您的用户名"/></td>
                 </tr>
                 <tr>
                     <th>密码：</th>
-                    <td><input type="password" name="userPassword" placeholder="请输入您的密码"/></td>
+                    <td><input type="password" id="userPassword" name="userPassword" placeholder="请输入您的密码"/></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3">
-                        <input type="submit" value="登录" onclick="toLogin()"/>
+                        <input type="submit" value="登录"/>
                     </td>
                 </tr>
             </table>
         </form>
+
+
     </div>
 
     <div class="layui-footer">
@@ -50,10 +53,6 @@
         var element = layui.element;
 
     });
-
-    <%--function aaaa() {--%>
-        <%--var a = "${sessionScope.userName}"--%>
-    <%--}--%>
 
 </script>
 </body>

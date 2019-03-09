@@ -930,30 +930,31 @@
     <table id="234" parent="8" name="user">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="235" parent="8" name="userinfo">
-      <Collation>utf8_general_ci</Collation>
-    </table>
-    <column id="236" parent="234" name="user_id">
+    <column id="235" parent="234" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="234" name="user_name">
+    <column id="236" parent="234" name="user_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="234" name="user_password">
+    <column id="237" parent="234" name="user_password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="234" name="user_status">
+    <column id="238" parent="234" name="user_phone">
       <Position>4</Position>
-      <DataType>tinyint(1)|0s</DataType>
-      <DefaultExpression>0</DefaultExpression>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="234" name="user_email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="240" parent="234" name="PRIMARY">
@@ -961,42 +962,5 @@
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="241" parent="235" name="userinfo_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="242" parent="235" name="user_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="243" parent="235" name="userinfo_phone">
-      <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="244" parent="235" name="userinfo_email">
-      <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="245" parent="235" name="user_id">
-      <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="246" parent="235" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>userinfo_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="247" parent="235" name="userinfo_ibfk_1">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>ssm-blog</RefSchemaName>
-      <RefTableName>user</RefTableName>
-      <RefColNames>user_id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

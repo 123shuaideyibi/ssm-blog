@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>博客</title>
+    <title>登录页面</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -14,16 +14,11 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
+        <div style="padding: 15px;">修改基本资料页面页面</div>
 
-        <div style="padding: 15px;">基本资料</div>
 
-        <div style="padding: 15px;">昵称：</div>
-        <div style="padding: 15px;">手机号：</div>
-        <div style="padding: 15px;">邮件：</div>
 
-        <div>
-            <button id="usermod">修改用户基本信息</button>
-        </div>
+
     </div>
 
     <div class="layui-footer">
@@ -38,6 +33,7 @@
         var element = layui.element;
 
     });
+
 </script>
 </body>
 </html>

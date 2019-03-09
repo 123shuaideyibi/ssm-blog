@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-<% response.sendRedirect("jsp/blogApp/welcome.jsp"); %>
+<% response.sendRedirect("jsp/main/login.jsp"); %>
 </body>
 </html>

@@ -1,7 +1,6 @@
 package dao;
 
 import com.atgongda.dao.UserMapper;
-import com.atgongda.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,16 +25,11 @@ public class DaoTest {
 
 
     /**
-     * 1、登录时通过用户名来确认用户名是否存在
-     *
-     * 提示：如果username是中文，则查询为null
-     * 解决方法：在jdbc.url后面添加  useUnicode=true&characterEncoding=utf-8  即可解决
+     * 1、登录时通过用户名查询用户
      */
     @Test
-    public void selectUserByUserName() {
-        System.out.println("dao测试开始。。。。");
-        System.out.println(userMapper.selectUserByUserName("张三"));
-        System.out.println("dao测试结束。。。。");
+    public void findByUserName() {
+        System.out.println(userMapper.findByUserName("张三"));
     }
 
     /**
@@ -43,22 +37,7 @@ public class DaoTest {
      */
     @Test
     public void insertUser(){
-        System.out.println("dao测试开始。。。。");
-        User user = new User();
-        user.setUserName("王浩");
-        user.setUserPassword("123");
-        System.out.println(userMapper.insertUser(user));
-        System.out.println("dao测试结束。。。。");
-    }
-
-    /**
-     * 退出登录的实现：
-     * 1、先确认该用户的登录状态status是true
-     * 1、
-     */
-    @Test
-    public void updateStatus(){
-        System.out.println();
+        System.out.println(userMapper.insertUser("a","a"));
     }
 
 }
