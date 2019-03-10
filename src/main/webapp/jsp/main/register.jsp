@@ -16,6 +16,8 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">注册页面</div>
+        ${user}
+
         <form action="${ctx}/user/register" method="post">
             <table border="0" align="center">
                 <caption>

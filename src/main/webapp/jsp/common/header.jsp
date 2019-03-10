@@ -41,7 +41,7 @@
             </a>
             <dl class="layui-nav-child">
                 <dd><a href="/jsp/main/basicInfo.jsp">基本资料</a></dd>
-                <dd><a href="/user/outLogin">退出</a></dd>
+                <dd><a href="@{${ctx}/user/outLogin}">退出</a></dd>
             </dl>
         </li>
 

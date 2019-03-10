@@ -15,7 +15,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">登录页面</div>
-
+        ${user}
 
         <form action="${ctx}/user/checkLogin" method="post">
             <table border="0" align="center">

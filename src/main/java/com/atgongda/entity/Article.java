@@ -7,13 +7,23 @@ package com.atgongda.entity;
  */
 public class Article {
     private Long articleId;
-    private User user;
+    private Long userId;
     private String articleTitle;
     private String articleDesc;
     private String articleSort;
     private String articleContent;
 
-
+    @Override
+    public String toString() {
+        return "Article{" +
+                "articleId=" + articleId +
+                ", userId=" + userId +
+                ", articleTitle='" + articleTitle + '\'' +
+                ", articleDesc='" + articleDesc + '\'' +
+                ", articleSort='" + articleSort + '\'' +
+                ", articleContent='" + articleContent + '\'' +
+                '}';
+    }
 
     public Long getArticleId() {
         return articleId;
@@ -23,12 +33,12 @@ public class Article {
         this.articleId = articleId;
     }
 
-    public User getUser() {
-        return user;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getArticleTitle() {
@@ -62,4 +72,5 @@ public class Article {
     public void setArticleContent(String articleContent) {
         this.articleContent = articleContent;
     }
+
 }

@@ -1,8 +1,8 @@
 package com.atgongda.dao;
 
+
 import com.atgongda.entity.User;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author sushuai

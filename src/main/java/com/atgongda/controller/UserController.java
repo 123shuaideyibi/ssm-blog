@@ -95,21 +95,21 @@ public class UserController {
         return null;
     }
 
-
-
-
-
-
-
-
-
-//    待用
-//    @RequestMapping(value = "/outLogin")
-//    public String toLogout(HttpSession session, HttpServletRequest request, HttpServletResponse response, SessionStatus sessionStatus) {
-//        //注销当前session
-//        session.removeAttribute("user");
-//        sessionStatus.setComplete();
-//        return "main/headPage";
-//    }
+    /**
+     * 4、点击退出按钮跳转到这里清空所有的session
+     * @param session
+     * @param request
+     * @param response
+     * @param sessionStatus
+     * @return
+     */
+    @RequestMapping(value = "/outLogin")
+    public String toLogout(HttpSession session, HttpServletRequest request, HttpServletResponse response, SessionStatus sessionStatus) {
+        //注销当前session
+        session.removeAttribute("user");
+        session.getAttribute("logout:"+"user");
+        sessionStatus.setComplete();
+        return "a";
+    }
 
 }

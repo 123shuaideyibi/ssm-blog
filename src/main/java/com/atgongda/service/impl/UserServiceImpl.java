@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean checkModify(Long userId, String userName, String userPassword, String userPhone, String userEmail) {
-        return userMapper.updateUserInfo(userId,userName,userPassword,userPhone,userEmail);
+        return userMapper.updateUserInfo(userId, userName, userPassword, userPhone, userEmail);
     }
 
 
