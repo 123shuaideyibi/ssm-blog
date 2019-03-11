@@ -56,17 +56,21 @@
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/jsp/main/sort/whole.jsp">全部</a></dd>
-                    <dd><a href="/jsp/main/sort/attention.jsp">关注</a></dd>
                     <dd><a href="/jsp/main/sort/font.jsp">前端</a></dd>
                     <dd><a href="/jsp/main/sort/after.jsp">后端</a></dd>
                     <dd><a href="/jsp/main/sort/database.jsp">数据库</a></dd>
-                    <dd><a href="/jsp/main/sort/program.jsp">编程语言</a></dd>
                     <dd><a href="/jsp/main/sort/others.jsp">其它</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item"><a href="/jsp/main/login.jsp">登录</a></li>
             <li class="layui-nav-item"><a href="/jsp/main/register.jsp">注册</a></li>
-            <li class="layui-nav-item"><a href="/jsp/main/background.jsp">后台管理</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">后台管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/jsp/background/blogManage.jsp">博客管理</a></dd>
+                    <dd><a href="/jsp/background/userManage.jsp">用户管理</a></dd>
+                </dl>
+            </li>
         </ul>
     </div>
 </div>

@@ -14,7 +14,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">后台管理页面</div>
+        <div style="padding: 15px;">所有用户管理页面</div>
         ${user}
 
 

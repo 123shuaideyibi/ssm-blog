@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
  */
 @RestController
 @RequestMapping("/article")
-@SessionAttributes(value = "article")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
