@@ -219,11 +219,7 @@
 
         <!--=====其它====-->
         <!--pagehelper分页  start===========-->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>5.1.2</version>
-        </dependency>
+
         <!--pagehelper分页  end=============-->
     </dependencies>
 
