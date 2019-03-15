@@ -14,9 +14,10 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">我的博客管理页面</div>
-        ${user}
+        <div style="padding: 15px;">后台管理</div>
+        ${user}<br><br>
 
+       <a href="${ctx}/users/showAllUser">用户管理页面跳转</a>
 
     </div>
 

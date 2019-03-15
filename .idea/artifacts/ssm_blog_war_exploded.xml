@@ -53,6 +53,7 @@
           <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.2" />
           <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.0" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

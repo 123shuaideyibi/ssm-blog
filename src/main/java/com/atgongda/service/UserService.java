@@ -1,6 +1,9 @@
 package com.atgongda.service;
 
 import com.atgongda.entity.User;
+import net.sf.json.JSONArray;
+
+import java.util.List;
 
 /**
  * @author sushuai
@@ -16,6 +19,5 @@ public interface UserService {
 
     //修改用户的基本信息：用户名、密码、手机号、邮箱
     boolean checkModify(Long userId, String userName, String userPassword, String userPhone, String userEmail);
-
 
 }

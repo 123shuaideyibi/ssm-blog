@@ -53,6 +53,7 @@
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree" lay-filter="test">
 
+            <%--分类--%>
             <li class="layui-nav-item layui-nav-itemed">
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
@@ -64,17 +65,15 @@
                 </dl>
             </li>
 
+            <%--登录--%>
             <li class="layui-nav-item"><a href="/jsp/main/login.jsp">登录</a></li>
 
+            <%--注册--%>
             <li class="layui-nav-item"><a href="/jsp/main/register.jsp">注册</a></li>
 
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">后台管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="/jsp/background/blogManage.jsp">博客管理</a></dd>
-                    <dd><a href="/jsp/background/userManage.jsp">用户管理</a></dd>
-                </dl>
-            </li>
+            <%--后台管理--%>
+            <li class="layui-nav-item"><a href="/jsp/main/background.jsp">后台管理</a></li>
+
 
         </ul>
     </div>

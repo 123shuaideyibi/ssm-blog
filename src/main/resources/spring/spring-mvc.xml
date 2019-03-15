@@ -25,7 +25,20 @@
     <!-- 3：扫描web相关的bean -->
     <context:component-scan base-package="com.atgongda.controller"/>
 
-
     <mvc:default-servlet-handler/>
+
+    <!--4、处理JSOn数据转换-->
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <!-- 为了处理返回的JSON数据的编码，默认是ISO-88859-1的，这里把它设置为UTF-8,解决有乱码的情况 -->
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+
 
 </beans>

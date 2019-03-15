@@ -1,14 +1,11 @@
 package com.atgongda.controller;
 
-
 import com.atgongda.entity.User;
 import com.atgongda.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,9 +25,6 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private HttpServletRequest request;
 
 
     /**
@@ -97,19 +91,28 @@ public class UserController {
 
     /**
      * 4、点击退出按钮跳转到这里清空所有的session
+     *
      * @param session
      * @param request
      * @param response
      * @param sessionStatus
      * @return
      */
-    @RequestMapping(value = "/outLogin")
-    public String toLogout(HttpSession session, HttpServletRequest request, HttpServletResponse response, SessionStatus sessionStatus) {
-        //注销当前session
-        session.removeAttribute("user");
-        session.getAttribute("logout:"+"user");
-        sessionStatus.setComplete();
-        return "a";
-    }
+//    @RequestMapping(value = "/outLogin")
+//    public String toLogout(HttpSession session, HttpServletRequest request, HttpServletResponse response, SessionStatus sessionStatus) {
+//        //注销当前session
+//        session.removeAttribute("user");
+//        session.getAttribute("logout:" + "user");
+//        sessionStatus.setComplete();
+//        return "writeSuccess";
+//    }
+
 
 }
+
+//用于测试index到controller到jsp的跳转，别删
+//    @RequestMapping("/a")
+//    public String a(){
+//        System.out.println("main");
+//        return "main";
+//    }

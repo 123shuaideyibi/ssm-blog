@@ -19,6 +19,7 @@
 
         session中的值：${user}
 
+
         <div>
             <table border="1" align="center">
                 <caption>
