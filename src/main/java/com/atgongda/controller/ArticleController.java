@@ -4,10 +4,10 @@ package com.atgongda.controller;
 import com.atgongda.entity.Article;
 import com.atgongda.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 写博客
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author sushuai
  * @date 2019/03/09/21:44
  */
-@RestController
+@Controller
 @RequestMapping("/article")
 public class ArticleController {
     @Autowired
@@ -32,7 +32,7 @@ public class ArticleController {
 
         boolean flag = articleService.upLoad(userId, articleTitle, articleDesc, articleSort, articleContent);
         if (flag == true) {
-            return "";
+            return "writeSuccess";
         }
         return null;
     }
