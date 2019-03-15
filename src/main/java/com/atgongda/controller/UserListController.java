@@ -16,19 +16,23 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/users")
-
 @SessionAttributes(value = "users")
 public class UserListController {
 
     @Autowired
     private UserListService userListService;
 
-    //查询所有用户的信息
+    /**
+     * 查询所有用户的信息
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/showAllUser")
     public String userList(Model model) {
         System.out.println("main");
         List<User> list = userListService.queryAllUser();
-        model.addAttribute("users",list);
+        model.addAttribute("users", list);
         return "back/userList";
 
     }

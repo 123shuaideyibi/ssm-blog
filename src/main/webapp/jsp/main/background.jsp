@@ -14,10 +14,11 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">后台管理</div>
-        ${user}<br><br>
-
-       <a href="${ctx}/users/showAllUser">用户管理页面跳转</a>
+        ${user.userId}
+        <hr>
+        <a href="${ctx}/users/showAllUser">用户管理页面跳转</a>
+        <hr>
+        <a href="${ctx}/myBlog/showMyBlog/${user.userId}">我的博客管理跳转</a><%--/${user.userId}--%>
 
     </div>
 
@@ -29,7 +30,7 @@
 <script src="${ctx}/static/plugins/layui/layui.js"></script>
 <script>
     //JavaScript代码区域
-    layui.use('element', function(){
+    layui.use('element', function () {
         var element = layui.element;
 
     });
