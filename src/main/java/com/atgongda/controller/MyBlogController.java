@@ -28,7 +28,7 @@ public class MyBlogController {
      *
      * @return
      */
-    @RequestMapping("/showMyBlog/{userId}")//{userId}
+    @RequestMapping("/showMyBlog/{userId}")
     public String queryAllMyBlog(@PathVariable("userId") Long userId, Model model) {
         System.out.println("main");
         System.out.println(userId);

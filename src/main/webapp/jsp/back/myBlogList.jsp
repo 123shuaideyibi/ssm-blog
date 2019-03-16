@@ -40,7 +40,7 @@
                     <td>${obj.articleContent}</td>
                     <td>
                         <%--rest风格查询--%>
-                        <a href="${ctx}/viewBlog/showMyBlog">查看文章</a>
+                        <a href="${ctx}/viewBlog/showMyBlog/${obj.articleId}">查看文章</a>
                         <%--<a href="${ctx}/.../${obj.articleId}">删除</a>--%>
                     </td>
                 </tr>
