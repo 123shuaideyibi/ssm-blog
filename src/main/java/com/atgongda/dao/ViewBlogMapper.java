@@ -11,4 +11,8 @@ import java.util.List;
 public interface ViewBlogMapper {
     //查看我的博客
     List<Article> queryMyBlog(Long articleId);
+
+    //查看全部博客
+    List<Article> queryAllBlog();
+
 }

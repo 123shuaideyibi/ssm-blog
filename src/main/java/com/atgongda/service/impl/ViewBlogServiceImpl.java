@@ -17,8 +17,23 @@ public class ViewBlogServiceImpl implements ViewBlogService {
     @Autowired
     private ViewBlogMapper viewBlogMapper;
 
+    /**
+     * 查看我的博客
+     * @param articleId
+     * @return
+     */
     @Override
     public List<Article> queryMyBlog(Long articleId) {
         return viewBlogMapper.queryMyBlog(articleId);
+    }
+
+
+    /**
+     * 查看全部博客
+     * @return
+     */
+    @Override
+    public List<Article> queryAllBlog() {
+        return viewBlogMapper.queryAllBlog();
     }
 }

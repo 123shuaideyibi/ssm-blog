@@ -19,15 +19,14 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("viewBlog")
-@SessionAttributes(value = "myArticle")
+@SessionAttributes(value = {"myArticle","allArticle"})
 public class ViewBlogController {
 
     @Autowired
     private ViewBlogService viewBlogService;
 
     /**
-     * 在我的博客当中点击查看博客，将文章的articleId传递到ViewBlogController，然后通过该articleId来查看整篇文章的数据，
-     * 将得到的文章信息在专门的放置阅读博客的jsp下供阅读
+     * 后台管理->我的博客管理->点击查看
      *
      * @param articleId
      * @return
@@ -43,4 +42,29 @@ public class ViewBlogController {
 
         return "common/viewMyBlog";
     }
+
+
+    /**
+     * 分类->展示全部博客
+     * @return
+     */
+    @RequestMapping("/showAllBlog")
+    public String showAllBlog(Model model){
+        List<Article> list = viewBlogService.queryAllBlog();
+        model.addAttribute("allArticle",list);
+        return "sort/allList";
+    }
+    /**
+     * 展示全部博客->点击查看
+     * @return
+     */
+    @RequestMapping("viewAllBlog/{articleId}")
+    public String viewAllBlog(@PathVariable("articleId") Long articleId){
+        System.out.println(articleId);
+        return "common/viewBlog";
+    }
+
+
+
+
 }

@@ -57,7 +57,7 @@
             <li class="layui-nav-item layui-nav-itemed">
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="/jsp/main/sort/whole.jsp">全部</a></dd>
+                    <dd><a href="/viewBlog/showAllBlog">全部</a></dd>
                     <dd><a href="/jsp/main/sort/font.jsp">前端</a></dd>
                     <dd><a href="/jsp/main/sort/after.jsp">后端</a></dd>
                     <dd><a href="/jsp/main/sort/database.jsp">数据库</a></dd>

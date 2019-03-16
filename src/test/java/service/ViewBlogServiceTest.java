@@ -25,4 +25,12 @@ public class ViewBlogServiceTest {
     public void m1(){
         System.out.println(viewBlogService.queryMyBlog((long) 26));
     }
+
+    /**
+     * 查看全部的博客
+     */
+    @Test
+    public void m2(){
+        System.out.println(viewBlogService.queryAllBlog());
+    }
 }

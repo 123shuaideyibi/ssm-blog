@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
@@ -23,5 +24,13 @@ public class ViewBlogDaoTest {
     @Test
     public void m1(){
         System.out.println(viewBlogMapper.queryMyBlog((long) 25));
+    }
+
+    /**
+     * 查看全部博客
+     */
+    @Test
+    public void m2(){
+        System.out.println(viewBlogMapper.queryAllBlog());
     }
 }
