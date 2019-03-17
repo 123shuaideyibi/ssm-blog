@@ -29,8 +29,8 @@
             <a href="">消息</a>
 
             <dl class="layui-nav-child">
-                <dd><a href="">收到评论</a></dd>
-                <dd><a href="">我的评论</a></dd>
+                <dd><a href="${ctx}/message/myMsg/${user.userName}">我的评论</a></dd>
+                <dd><a href="${ctx}/message/otherMsg">收到评论</a></dd>
             </dl>
         </li>
 

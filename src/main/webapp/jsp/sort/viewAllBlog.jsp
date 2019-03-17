@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>登录页面</title>
+    <title>全部博客查看页面</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -14,9 +14,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">全部博客查看页面</div>
-        ${allBlog.userName}
-        ${user.userName}
+        <div style="padding: 15px;"></div>
 
         <%--作者id--%>
         <div>
