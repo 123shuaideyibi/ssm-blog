@@ -1,7 +1,7 @@
 package com.atgongda.entity;
 
 /**
- * 这是自定义的，数据库的表中并没有对应的表
+ * 首页表
  * @author sushuai
  * @date 2019/03/16/21:21
  */
