@@ -4,7 +4,7 @@
     <div class="layui-logo">博客管理系统</div>
     <!-- 头部区域（可配合layui已有的水平导航） -->
     <ul class="layui-nav layui-layout-left">
-        <li class="layui-nav-item"><a href="/jsp/main/headPage.jsp">首页</a></li>
+        <li class="layui-nav-item"><a href="/allBlog/showAllBlog">首页</a></li>
     </ul>
     <ul class="layui-nav layui-layout-right">
 
@@ -57,8 +57,7 @@
             <li class="layui-nav-item layui-nav-itemed">
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="/viewBlog/showAllBlog">全部</a></dd>
-                    <dd><a href="/jsp/main/sort/font.jsp">前端</a></dd>
+                    <dd><a href="/frontBlog/showFrontBlog">前端</a></dd>
                     <dd><a href="/jsp/main/sort/after.jsp">后端</a></dd>
                     <dd><a href="/jsp/main/sort/database.jsp">数据库</a></dd>
                     <dd><a href="/jsp/main/sort/others.jsp">其它</a></dd>

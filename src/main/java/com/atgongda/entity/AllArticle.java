@@ -1,23 +1,24 @@
 package com.atgongda.entity;
 
 /**
- * 文章表
+ * 这是自定义的，数据库的表中并没有对应的表
  * @author sushuai
- * @date 2019/03/09/21:19
+ * @date 2019/03/16/21:21
  */
-public class Article {
+public class AllArticle {
     private Long articleId;
-    private User user;
+    private String userName;
     private String articleTitle;
     private String articleDesc;
     private String articleSort;
     private String articleContent;
 
+
     @Override
     public String toString() {
-        return "Article{" +
+        return "AllArticle{" +
                 "articleId=" + articleId +
-                ", user=" + user +
+                ", userName='" + userName + '\'' +
                 ", articleTitle='" + articleTitle + '\'' +
                 ", articleDesc='" + articleDesc + '\'' +
                 ", articleSort='" + articleSort + '\'' +
@@ -33,12 +34,12 @@ public class Article {
         this.articleId = articleId;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getArticleTitle() {

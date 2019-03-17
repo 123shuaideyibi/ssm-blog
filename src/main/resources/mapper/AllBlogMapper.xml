@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atgongda.dao.AllBlogMapper">
+
+    <!--查询内容：文章id、作者名、文章标题、文章简介、文章标签、文章内容-->
+    <select id="queryAllBlogList" resultType="com.atgongda.entity.AllArticle">
+       SELECT a.article_id,u.user_name, a.article_title, a.article_desc, a.article_sort,
+       a.article_content FROM article a,user u WHERE a.user_id=u.user_id
+    </select>
+
+    <!--查看首页的博客-->
+    <select id="queryAllBlog" resultType="com.atgongda.entity.AllArticle">
+          SELECT a.article_id,u.user_name, a.article_title, a.article_desc, a.article_sort,
+       a.article_content FROM article a,user u WHERE a.user_id=u.user_id and a.article_id = #{articleId}
+    </select>
+
+</mapper>

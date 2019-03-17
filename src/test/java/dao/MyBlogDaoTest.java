@@ -19,10 +19,20 @@ public class MyBlogDaoTest {
     private MyBlogMapper myBlogMapper;
 
     /**
-     * 查询当前登录用户的所有博客
+     * 查询id=1的博主的博客列表
      */
     @Test
     public void m1(){
-        System.out.println(myBlogMapper.queryMyBlog((long) 31));
+        System.out.println(myBlogMapper.queryMyBlogList((long) 1));//博客id
     }
+
+    /**
+     *查看articleId=29的文章
+     */
+    @Test
+    public void m2(){
+        System.out.println(myBlogMapper.queryMyBlog((long) 29));
+    }
+
+
 }

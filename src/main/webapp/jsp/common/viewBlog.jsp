@@ -19,6 +19,19 @@
         <div style="padding: 15px;">登录页面</div>
         打开全部博客、前端、后端、数据库、其它都在这里面展示
 
+
+        发表评论
+        <div>
+            <div>
+                <input type="text" id="commentContent" name="commentContent" placeholder="请输入评论内容"
+                       class="layui-input">
+            </div>
+            <div>
+                <input type="button" value="确认发送">
+            </div>
+        </div>
+
+
     </div>
 
     <div class="layui-footer">

@@ -3,7 +3,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atgongda.dao.MyBlogMapper">
 
-    <select id="queryMyBlog" resultType="com.atgongda.entity.Article">
+    <!--查看我的博客列表-->
+    <select id="queryMyBlogList" resultType="com.atgongda.entity.Article">
         select * from article where user_id = #{userId}
     </select>
+
+    <!--查询我的博客-->
+    <select id="queryMyBlog" resultType="com.atgongda.entity.Article">
+        select * from article where article_id = #{articleId}
+    </select>
+
+
 </mapper>

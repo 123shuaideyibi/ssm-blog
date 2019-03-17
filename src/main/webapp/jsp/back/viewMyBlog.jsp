@@ -16,7 +16,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">阅读博客页面</div>
-        <c:forEach items="${myArticle}" var="obj">
+        <c:forEach items="${myBlog}" var="obj">
 
 
             <%--文章标题--%>

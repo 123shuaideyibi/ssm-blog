@@ -9,6 +9,9 @@ import java.util.List;
  * @date 2019/03/15/15:29
  */
 public interface MyBlogService {
-    //查询我的所有博客
-    List<Article> queryMyBlog(Long userId);
+    //查看我的博客列表
+    List<Article> queryMyBlogList(Long userId);
+
+    //查看我的博客
+    List<Article> queryMyBlog(Long articleId);
 }

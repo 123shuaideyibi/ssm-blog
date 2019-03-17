@@ -1,6 +1,6 @@
 package service;
 
-import com.atgongda.service.ViewBlogService;
+import com.atgongda.service.AllBlogService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,21 +9,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * @author sushuai
- * @date 2019/03/16/10:15
+ * @date 2019/03/16/17:38
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml", "classpath:spring/spring-service.xml"})
-public class ViewBlogServiceTest {
-
+public class AllBlogServiceTest {
     @Autowired
-    private ViewBlogService viewBlogService;
+    private AllBlogService allBlogService;
 
     /**
-     * 在我的博客里，点击查看我的文章
+     * 查询全部的博客的列表
      */
     @Test
     public void m1(){
-        System.out.println(viewBlogService.queryMyBlog((long) 26));
+        System.out.println(allBlogService.queryAllBlogList());
     }
 
     /**
@@ -31,6 +30,6 @@ public class ViewBlogServiceTest {
      */
     @Test
     public void m2(){
-        System.out.println(viewBlogService.queryAllBlog());
+        System.out.println(allBlogService.queryAllBlog((long) 33));
     }
 }

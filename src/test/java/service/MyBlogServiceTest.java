@@ -18,8 +18,20 @@ public class MyBlogServiceTest {
     @Autowired
     private MyBlogService myBlogService;
 
+
+    /**
+     * 查询userId=1的博客列表
+     */
     @Test
     public void m1(){
-        System.out.println(myBlogService.queryMyBlog((long) 31));
+        System.out.println(myBlogService.queryMyBlogList((long) 1));//博主id
+    }
+
+    /**
+     * 查看articleId=31的博客
+     */
+    @Test
+    public void m2(){
+        System.out.println(myBlogService.queryMyBlog((long) 30));//博客id
     }
 }

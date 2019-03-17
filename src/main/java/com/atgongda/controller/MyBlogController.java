@@ -17,23 +17,36 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/myBlog")
-@SessionAttributes(value = "myBlog")
+@SessionAttributes(value = {"myBlogList","myBlog"})
 public class MyBlogController {
 
     @Autowired
     private MyBlogService myBlogService;
 
     /**
-     * 跳转到我的我的博客列表
+     * 查看我的博客列表
      *
      * @return
      */
     @RequestMapping("/showMyBlog/{userId}")
-    public String queryAllMyBlog(@PathVariable("userId") Long userId, Model model) {
-        System.out.println("main");
+    public String showMyBlog(@PathVariable("userId") Long userId, Model model) {
         System.out.println(userId);
-        List<Article> list = myBlogService.queryMyBlog(userId);
-        model.addAttribute("myBlog", list);
+        //通过当前登录用户id打开文章列表
+        List<Article> list = myBlogService.queryMyBlogList(userId);
+        model.addAttribute("myBlogList", list);
         return "back/myBlogList";
     }
+
+    /**
+     * 查看我的博客
+     * @return
+     */
+    @RequestMapping("viewMyBlog/{articleId}")
+    public String viewMyBlog(@PathVariable("articleId") Long articleId,Model model){
+        System.out.println(articleId);
+        List<Article> list = myBlogService.queryMyBlog(articleId);
+        model.addAttribute("myBlog",list);
+        return "back/viewMyBlog";
+    }
+
 }

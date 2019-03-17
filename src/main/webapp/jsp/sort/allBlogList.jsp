@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>我的博客</title>
+    <title>登录页面</title>
     <link rel="stylesheet" href="${ctx}/static/plugins/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -15,13 +15,14 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">我的博客列表页面</div>
+        <div style="padding: 15px;">全部博客列表页面</div>
+
 
         <table border="1">
             <thead>
             <tr>
                 <th>文章id</th>
-                <th>作者id</th>
+                <th>作者</th>
                 <th>文章标题</th>
                 <th>文章简介</th>
                 <th>文章标签</th>
@@ -30,16 +31,17 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${myBlogList}" var="obj">
+            <c:forEach items="${allBlogList}" var="obj">
                 <tr>
                     <td>${obj.articleId}</td>
-                    <td>${obj.user.userId}</td>
+                    <td>${obj.userName}</td>
                     <td>${obj.articleTitle}</td>
                     <td>${obj.articleDesc}</td>
                     <td>${obj.articleSort}</td>
                     <td>${obj.articleContent}</td>
                     <td>
-                        <a href="${ctx}/myBlog/viewMyBlog/${obj.articleId}">查看文章</a>
+                            <%--查看跳转--%>
+                        <a href="${ctx}/allBlog/viewAllBlog/${obj.articleId}">查看文章</a>
                     </td>
                 </tr>
             </c:forEach>

@@ -7,5 +7,4 @@ package com.atgongda.service;
 public interface ArticleService {
     //写博客
     boolean upLoad(Long userId, String articleTitle, String articleDesc, String articleSort, String articleContent);
-
 }

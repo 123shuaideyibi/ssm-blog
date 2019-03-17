@@ -2,8 +2,6 @@ package service;
 
 
 import com.atgongda.service.ArticleService;
-import com.atgongda.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +19,11 @@ public class ArticleServiceTest {
     private ArticleService articleService;
 
     /**
-     * 1、写博客service测试
+     * 1、写博客
      */
     @Test
     public void m1(){
-        boolean flag = articleService.upLoad((long) 1, "eee", "e", "e", "e");
+        boolean flag = articleService.upLoad((long) 1, "eee", "e", "2", "e");
         System.out.println("articleService测试的flag："+flag);
     }
 }
