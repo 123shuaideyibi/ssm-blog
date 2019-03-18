@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,6 +17,26 @@
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">收到评论</div>
 
+        <table border="1">
+            <thead>
+            <tr>
+                <th>文章id</th>
+                <th>博主</th>
+                <th>评论者</th>
+                <th>评论内容</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${otherMsg}" var="obj">
+                <tr>
+                    <td>${obj.articleId}</td>
+                    <td>${obj.blogger}</td>
+                    <td>${obj.observer}</td>
+                    <td>${obj.commentContent}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
     </div>
 
     <div class="layui-footer">

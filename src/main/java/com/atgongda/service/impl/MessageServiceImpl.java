@@ -26,4 +26,14 @@ public class MessageServiceImpl implements MessageService {
     public List<Comment> queryMyMessageList(String observer) {
         return messageMapper.queryMyMessageList(observer);
     }
+
+    /**
+     * 查看评论我的列表业务
+     * @param blogger
+     * @return
+     */
+    @Override
+    public List<Comment> queryOtherMessageList(String blogger) {
+        return messageMapper.queryOtherMessageList(blogger);
+    }
 }

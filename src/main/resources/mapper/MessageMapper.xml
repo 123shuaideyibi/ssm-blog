@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.atgongda.dao.MessageMapper">
+    <!--我评论的列表-->
     <select id="queryMyMessageList" resultType="com.atgongda.entity.Comment">
         select * from comment where observer = #{observer}
+    </select>
+
+    <!--评论我的列表-->
+    <select id="queryOtherMessageList" resultType="com.atgongda.entity.Comment">
+        select * from comment where blogger = #{blogger}
     </select>
 </mapper>

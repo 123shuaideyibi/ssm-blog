@@ -30,7 +30,7 @@
 
             <dl class="layui-nav-child">
                 <dd><a href="${ctx}/message/myMsg/${user.userName}">我的评论</a></dd>
-                <dd><a href="${ctx}/message/otherMsg">收到评论</a></dd>
+                <dd><a href="${ctx}/message/otherMsg/${user.userName}">收到评论</a></dd>
             </dl>
         </li>
 
@@ -59,9 +59,9 @@
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/frontBlog/showFrontBlog">前端</a></dd>
-                    <dd><a href="/jsp/main/sort/after.jsp">后端</a></dd>
-                    <dd><a href="/jsp/main/sort/database.jsp">数据库</a></dd>
-                    <dd><a href="/jsp/main/sort/others.jsp">其它</a></dd>
+                    <dd><a href="/endBlog/showEndBlog">后端</a></dd>
+                    <dd><a href="/databaseBlog/showDatabaseBlog">数据库</a></dd>
+                    <dd><a href="/otherBlog/showOtherBlog">其它</a></dd>
                 </dl>
             </li>
 

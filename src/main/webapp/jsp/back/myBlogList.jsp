@@ -16,6 +16,7 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">我的博客列表页面</div>
+        ${myBlogList}
 
         <table border="1">
             <thead>
@@ -33,7 +34,7 @@
             <c:forEach items="${myBlogList}" var="obj">
                 <tr>
                     <td>${obj.articleId}</td>
-                    <td>${obj.user.userId}</td>
+                    <td>${obj.userId}</td>
                     <td>${obj.articleTitle}</td>
                     <td>${obj.articleDesc}</td>
                     <td>${obj.articleSort}</td>

@@ -11,4 +11,7 @@ import java.util.List;
 public interface MessageMapper {
     //查找我的评论列表
     List<Comment> queryMyMessageList(String observer);
+
+    //查看评论我的列表
+    List<Comment> queryOtherMessageList(String blogger);
 }

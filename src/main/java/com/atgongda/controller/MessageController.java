@@ -29,7 +29,7 @@ public class MessageController {
     @RequestMapping("/myMsg/{userName}")
     public String toMyMsg(@PathVariable("userName") String observer, Model model) {
         List<Comment> list = messageService.queryMyMessageList(observer);
-        model.addAttribute("myMsg",list);
+        model.addAttribute("myMsg", list);
         return "message/myMessage";
     }
 
@@ -38,8 +38,10 @@ public class MessageController {
      *
      * @return
      */
-    @RequestMapping("/otherMsg")
-    public String toOtherMsg() {
+    @RequestMapping("/otherMsg/{userName}")
+    public String toOtherMsg(@PathVariable("userName")String blogger,Model model) {
+        List<Comment> list = messageService.queryOtherMessageList(blogger);
+        model.addAttribute("otherMsg",list);
         return "message/otherMessage";
     }
 
