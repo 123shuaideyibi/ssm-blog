@@ -29,11 +29,12 @@ public class AllBlogServiceImpl implements AllBlogService {
         return list;
     }
 
-//    /**
-//     * 查看全部的博客
-//     * @param articleId
-//     * @return
-//     */
+    /**
+     * 查看全部的博客
+     *
+     * @param articleId
+     * @return
+     */
     @Override
     public AllArticle queryAllBlog(Long articleId) {
         return allBlogMapper.queryAllBlog(articleId);

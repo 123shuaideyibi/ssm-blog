@@ -1,11 +1,11 @@
 package dao;
 
+import com.atgongda.dao.AfterBlogMapper;
 import com.atgongda.dao.FrontBlogMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
@@ -14,24 +14,25 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/spring-dao.xml")
-public class FrontBlogDaoTest {
+public class AfterBlogDaoTest {
 
     @Autowired
-    private FrontBlogMapper frontBlogMapper;
+    private AfterBlogMapper afterBlogMapper;
 
     /**
-     * 查看前端的博客列表
+     * 查看后端的博客列表
      */
     @Test
     public void m1(){
-        System.out.println(frontBlogMapper.queryFrontBlogList());
+        System.out.println(afterBlogMapper.queryAfterBlogList());
     }
 
     /**
-     * 查看前端的博客
+     * 查看后端的博客
      */
     @Test
     public void m2(){
-        System.out.println(frontBlogMapper.queryFrontBlog((long) 33));
+        System.out.println(afterBlogMapper.queryAfterBlog((long) 35));
     }
+
 }

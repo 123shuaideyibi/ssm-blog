@@ -30,11 +30,11 @@ public class ArticleServiceImpl implements ArticleService {
     public boolean upLoad(Long userId, String articleTitle, String articleDesc, String articleSort, String articleContent) {
 
         //
-        if (articleSort == "1") {
+        if (articleSort.equals("1")) {
             articleSort = "前端";
-        } else if (articleSort == "2") {
+        } else if (articleSort.equals("2")) {
             articleSort = "后端";
-        } else if (articleSort == "3") {
+        } else if (articleSort.equals("3")) {
             articleSort = "数据库";
         } else {
             articleSort = "其它";

@@ -11,6 +11,7 @@ import java.util.List;
  */
 
 public interface AllBlogMapper {
+    //查看全部的博客列表
     List<AllArticle> queryAllBlogList();
 
     //查看全部的博客

@@ -59,9 +59,9 @@
                 <a class="" href="javascript:;">分类</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/frontBlog/showFrontBlog">前端</a></dd>
-                    <dd><a href="/endBlog/showEndBlog">后端</a></dd>
+                    <dd><a href="/afterBlog/showAfterBlog">后端</a></dd>
                     <dd><a href="/databaseBlog/showDatabaseBlog">数据库</a></dd>
-                    <dd><a href="/otherBlog/showOtherBlog">其它</a></dd>
+                    <dd><a href="">其它</a></dd>
                 </dl>
             </li>
 

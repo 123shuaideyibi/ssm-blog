@@ -1,6 +1,7 @@
 package com.atgongda.service;
 
 import com.atgongda.entity.AllArticle;
+import com.atgongda.entity.FrontArticle;
 
 import java.util.List;
 
@@ -10,5 +11,8 @@ import java.util.List;
  */
 public interface FrontBlogService {
     //查看前端博客列表
-    List<AllArticle> queryFrontBlogList();
+    List<FrontArticle> queryFrontBlogList();
+
+    //查看前端的博客
+    FrontArticle queryFrontBlog(Long articleId);
 }
