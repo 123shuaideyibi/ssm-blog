@@ -9,8 +9,6 @@ import java.util.List;
  * @date 2019/03/19/15:11
  */
 public interface AfterBlogService {
-
-
     //查看后端博客列表
     List<AfterArticle> queryAfterBlogList();
 
