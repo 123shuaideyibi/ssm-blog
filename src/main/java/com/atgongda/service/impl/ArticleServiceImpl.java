@@ -34,9 +34,7 @@ public class ArticleServiceImpl implements ArticleService {
             articleSort = "前端";
         } else if (articleSort.equals("2")) {
             articleSort = "后端";
-        } else if (articleSort.equals("3")) {
-            articleSort = "数据库";
-        } else {
+        }else {
             articleSort = "其它";
         }
 

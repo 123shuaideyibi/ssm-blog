@@ -48,8 +48,7 @@
                     <select id="articleSort" name="articleSort" class="layui-input">
                         <option value="1" selected>前端</option>
                         <option value="2">后端</option>
-                        <option value="3">数据库</option>
-                        <option value="4">其它</option>
+                        <option value="3">其它</option>
                     </select>
                 </div>
             </div>
