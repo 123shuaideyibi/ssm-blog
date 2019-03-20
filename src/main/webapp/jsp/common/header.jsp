@@ -17,7 +17,7 @@
         <li class="layui-nav-item">
             <div id="box">
                 <input type="text" class="aa">
-                <input type="button" value="搜索" class="bb">
+                <input type="button" value="搜索" id="search" class="search">
             </div>
         </li>
 
