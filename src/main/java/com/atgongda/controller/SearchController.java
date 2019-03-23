@@ -15,7 +15,6 @@ public class SearchController {
 
     @RequestMapping("/mySearch")
     public String mySearch(){
-
         return "search/searchResult";
     }
 }
