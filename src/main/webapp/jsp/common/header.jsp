@@ -16,8 +16,10 @@
 
         <li class="layui-nav-item">
             <div id="box">
-                <input type="text" class="aa">
-                <input type="button" value="搜索" id="search" class="search">
+                <form action="${ctx}/search/mySearch" method="post">
+                    <input type="text" id="searchContent" class="searchContent">
+                    <input type="submit" value="搜索" id="search" class="search">
+                </form>
             </div>
         </li>
 
