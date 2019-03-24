@@ -16,6 +16,12 @@
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">搜索结果页面</div>
 
+
+
+        <p>${searchContent}</p>
+
+
+
     </div>
 
     <div class="layui-footer">

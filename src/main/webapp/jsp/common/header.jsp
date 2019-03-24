@@ -16,8 +16,8 @@
 
         <li class="layui-nav-item">
             <div id="box">
-                <form action="${ctx}/search/mySearch" method="post">
-                    <input type="text" id="searchContent" class="searchContent">
+                <form action="${ctx}/search/mySearch" method="post"  modelAttribute="search">
+                    <input type="text" id="searchContent" name="searchContent" class="searchContent" placeholder="按照作者名/文章名搜索">
                     <input type="submit" value="搜索" id="search" class="search">
                 </form>
             </div>
