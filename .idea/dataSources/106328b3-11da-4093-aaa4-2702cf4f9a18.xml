@@ -1019,39 +1019,49 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="254" parent="238" name="PRIMARY">
+    <index id="254" parent="238" name="article_id">
+      <ColNames>article_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="255" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>comment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="255" parent="239" name="user_id">
+    <foreign-key id="256" parent="238" name="comment_ibfk_1">
+      <ColNames>article_id</ColNames>
+      <RefSchemaName>ssm-blog</RefSchemaName>
+      <RefTableName>article</RefTableName>
+      <RefColNames>article_id</RefColNames>
+    </foreign-key>
+    <column id="257" parent="239" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="239" name="user_name">
+    <column id="258" parent="239" name="user_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="239" name="user_password">
+    <column id="259" parent="239" name="user_password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="239" name="user_phone">
+    <column id="260" parent="239" name="user_phone">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="239" name="user_email">
+    <column id="261" parent="239" name="user_email">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="260" parent="239" name="PRIMARY">
+    <key id="262" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>

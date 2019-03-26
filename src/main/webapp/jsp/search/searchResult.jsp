@@ -16,11 +16,11 @@
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">搜索结果页面</div>
 
+        <p>根据用户名搜索</p>
+        <p>${searchResult}</p>
 
-
-        <p>${searchContent}</p>
-
-
+        <p>根据文章名搜索</p>
+        <p>${searchResult2}</p>
 
     </div>
 

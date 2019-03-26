@@ -14,6 +14,7 @@ public class SearchContent {
                 '}';
     }
 
+    //get和set
     public String getSearchContent() {
         return searchContent;
     }
